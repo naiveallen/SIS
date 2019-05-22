@@ -1,0 +1,53 @@
+<center>
+    <h2>Edit student</h2>
+    <form action="/students/<%= @student.id %>" method="post" name="student" onsubmit="return check()">
+        <input type="hidden" name="_method" value="put">
+        ID: <input type="text" value="<%= @student.id %>" disabled="disabled"/><br><br>
+        Firstname: <input type="text" value="<%= @student.firstname %>" name="firstname">*<br><br>
+        Lastname: <input type="text" value="<%= @student.lastname %>" name="lastname">*<br><br>
+        Email: <input type="text" value="<%= @student.email %>" name="email">*<br><br>
+        Gender: 
+            <% if @student.gender == 0%>
+                Male：<input type="radio" name="gender" value="1">
+                Female：<input type="radio" name="gender" value="0" checked><br><br>
+            <% else %>
+                Male：<input type="radio" name="gender" value="1" checked>
+                Female：<input type="radio" name="gender" value="0"><br><br>
+            <% end %>
+        Address: <input type="text" value="<%= @student.address %>" name="address">*<br><br>
+        Birthday: <input type="date" value="<%= @student.birthday %>" name="birthday">*<br><br>
+        <input type="submit" value="submit">
+    </form>
+</center>
+
+
+<script LANGUAGE="javascript">
+    function check(){
+        if (document.student.firstname.value.length == 0) {
+            alert("Please input firstname.");
+            document.student.firstname.focus();
+            return false;
+        }
+		if (document.student.lastname.value.length == 0) {
+	        alert("Please input lastname.");
+	        document.student.lastname.focus();
+	        return false;
+		}
+		if (document.student.email.value.length == 0) {
+	        alert("Please input email.");
+	        document.student.email.focus();
+	        return false;
+		}
+		if (document.student.address.value.length == 0) {
+	        alert("Please input address.");
+	        document.student.address.focus();
+	        return false;
+		}
+		if (document.student.birthday.value.length == 0) {
+	        alert("Please input birthday.");
+	        document.student.birthday.focus();
+	        return false;
+		}
+	}
+</script>
+

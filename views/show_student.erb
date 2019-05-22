@@ -1,0 +1,10 @@
+<h1>Student Information</h1>
+<h4>ID: <%= @student.id %></h4>
+<h4>Firstname: <%= @student.firstname %></h4>
+<h4>Lastname: <%= @student.lastname %></h4>
+<h4>Gender: <%= @student.gender == 0 ? 'Female' : 'Male' %></h4>
+<h4>Email: <%= @student.email %></h4>
+<h4>Address: <%= @student.address %></h4>
+<h4>Birthday: <%= @student.birthday %></h4>
+<a href="/students">back</a> <a href="/students/<%= @student.id %>/edit">Edit</a>
+

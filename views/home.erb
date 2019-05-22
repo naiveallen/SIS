@@ -1,0 +1,9 @@
+<h1>Welcome to Home Page<% if @isLogin %>, admin<% end %>!</h1>
+<p>This is a Student Information System.</p>
+<% if @isLogin %>
+  <p class="description"><em>Now, you can create a new student, edit a student profile and delete a student.</em></p>
+  <p class="description"><em>At the same time, you can also delete some comments that you don't like.</em></p>
+  <p class="description"><em>Enjoy it :)</em></p>
+<% end %>
+<a href="/about" class="btn btn-primary btn-lg" role="button">About</a>
+   

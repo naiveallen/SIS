@@ -1,0 +1,9 @@
+<h2>Comment - <%= @comment.name %></h2>
+<h4>Created at: <%= @comment.created_at %></h4>
+<h4>Content: <%= @comment.content %></h4>
+    <form action="/comments/<%= @comment.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="delete">
+    </form>
+<a href="/comments">back</a>
+

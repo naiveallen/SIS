@@ -1,0 +1,18 @@
+<h1>Create a new comment</h1>
+
+<form action="/comments/new" method="post" name="comment" onsubmit="return check()">
+    name: <input type="text" name="name">*<br><br>
+    Content: <textarea name="content" rows="10" cols="50" placeholder="Write something here..."></textarea><br><br>
+    <input type="submit" value="submit">
+</form>
+    
+<script LANGUAGE="javascript">
+    function check(){
+        if (document.comment.name.value.length == 0) {
+            alert("Please input comment name.");
+            document.comment.name.focus();
+            return false;
+        }
+    }
+</script>
+
