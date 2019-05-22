@@ -5,8 +5,7 @@ require 'date'
 
 
 configure do
-    set :bind, '0.0.0.0'
-    set :environment, :development
+    set :environment, :production
     set :show_exceptions, false
     enable :sessions
     set :username, "admin"
